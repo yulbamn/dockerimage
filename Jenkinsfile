@@ -6,11 +6,11 @@ node {
     }
     
     stage('Build image') {
-       app = docker.build("yulbamn/shopping-web")
+       app = docker.build("zenaksacr.azurecr.io/shopping-web")
     }
     
     stage('Push image') {        
-        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+        docker.withRegistry('https://zenaksacr.azurecr.io', 'acr') {
             app.push("${env.BUILD_NUMBER}")
         }
     }
