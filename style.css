@@ -23,7 +23,7 @@
 
 body {
   height: 100vh;
-  background-color: var(--color-aquamarine);
+  background-color: var(--color-black);
   display: flex;
   flex-direction: column;
   justify-content: center;
